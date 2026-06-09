@@ -1,9 +1,9 @@
 <?php
 error_reporting(E_ALL^(E_NOTICE | E_WARNING | E_DEPRECATED));
-$hostname_conn = "192.168.0.233";
+$hostname_conn = "localhost:3306";
 $database_conn = "dbaset_rsijs";
-$username_conn = "umum";
-$password_conn = "RSmndb2020";
+$username_conn = "root";
+$password_conn = "";
 
 $konek = mysql_connect($hostname_conn,$username_conn,$password_conn,$database_conn)or die("Koneksi gagal");
 mysql_select_db($database_conn,$konek)or die("Database tidak bisa dibuka");
