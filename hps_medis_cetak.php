@@ -1,5 +1,5 @@
 <?php
-include '../koneksi/konek.php';
+include 'koneksi/konek.php';
 
 $kode = isset($_REQUEST['kode']) ? $_REQUEST['kode'] : '';
 if (empty($kode)) {
@@ -138,8 +138,8 @@ $info = array(
 // Handle download Excel
 // ================================================================
 if (isset($_GET['download']) && $_GET['download'] == 'excel') {
-    require_once('../include/PHPExcel/Classes/PHPExcel.php');
-    require_once('../include/PHPExcel/Classes/PHPExcel/IOFactory.php');
+    require_once('include/PHPExcel/Classes/PHPExcel.php');
+    require_once('include/PHPExcel/Classes/PHPExcel/IOFactory.php');
 
     $objPHPExcel = new PHPExcel();
     $objPHPExcel->setActiveSheetIndex(0);
